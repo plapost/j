@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '926283723562438');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=926283723562438&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Официальный онлайн покер-рум</title>
+
+<meta name="description" content="Закрытая платформа для игроков, которые ценят стратегию, интеллект и высокий уровень игры.">
+
+<style>
+:root{
+  --bg:#03050a;
+  --card:rgba(255,255,255,.075);
+  --card2:rgba(255,255,255,.035);
+  --stroke:rgba(255,255,255,.14);
+  --text:#f7f3e8;
+  --muted:#b8b2a2;
+  --gold:#d8b76a;
+  --gold2:#f3df9e;
+  --dark:#070911;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  min-height:100%;
+}
+
+body{
+  font-family: Inter, Arial, sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(216,183,106,.16), transparent 28%),
+    radial-gradient(circle at 82% 76%, rgba(120,70,255,.12), transparent 32%),
+    linear-gradient(135deg,#03050a 0%,#080b14 42%,#111420 100%);
+}
+
+body::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(circle at center, black, transparent 72%);
+  pointer-events:none;
+}
+
+.hero{
+  position:relative;
+  width:100%;
+  max-width:940px;
+  padding:68px 48px;
+  text-align:center;
+  border-radius:36px;
+  border:1px solid var(--stroke);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.035)),
+    radial-gradient(circle at top, rgba(216,183,106,.13), transparent 42%);
+  backdrop-filter:blur(22px);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.62),
+    inset 0 1px 0 rgba(255,255,255,.16);
+  overflow:hidden;
+}
+
+.hero::before,
+.hero::after{
+  content:"♠";
+  position:absolute;
+  font-size:190px;
+  line-height:1;
+  color:rgba(216,183,106,.055);
+  pointer-events:none;
+}
+
+.hero::before{
+  left:-24px;
+  bottom:-46px;
+  transform:rotate(-18deg);
+}
+
+.hero::after{
+  content:"♦";
+  right:-20px;
+  top:-48px;
+  transform:rotate(16deg);
+}
+
+.label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 18px;
+  margin-bottom:26px;
+  border-radius:999px;
+  border:1px solid rgba(216,183,106,.28);
+  background:rgba(216,183,106,.08);
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.label::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 18px var(--gold);
+}
+
+h1{
+  max-width:820px;
+  margin:0 auto 24px;
+  font-size:clamp(38px,6vw,76px);
+  line-height:.92;
+  letter-spacing:-.055em;
+  font-weight:900;
+}
+
+h1 span{
+  background:linear-gradient(135deg,#fff 0%,#f0dfaa 42%,#b89242 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
+  max-width:690px;
+  margin:0 auto 34px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.75;
+}
+
+.meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:38px;
+}
+
+.meta span{
+  padding:11px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.10);
+  color:#efe8d5;
+  font-size:14px;
+}
+
+.btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:270px;
+  height:62px;
+  padding:0 34px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+  color:#17120a;
+  background:linear-gradient(135deg,#fff3bd 0%,#d8b76a 46%,#9e7428 100%);
+  box-shadow:
+    0 18px 45px rgba(216,183,106,.28),
+    inset 0 1px 0 rgba(255,255,255,.55);
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 26px 60px rgba(216,183,106,.36),
+    inset 0 1px 0 rgba(255,255,255,.65);
+}
+
+.btn::after{
+  content:"→";
+  margin-left:10px;
+  transition:.25s ease;
+}
+
+.btn:hover::after{
+  transform:translateX(4px);
+}
+
+.trust{
+  margin-top:22px;
+  color:rgba(255,255,255,.45);
+  font-size:13px;
+}
+
+@media(max-width:640px){
+  body{
+    padding:16px;
+  }
+
+  .hero{
+    padding:42px 22px;
+    border-radius:26px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .btn{
+    width:100%;
+    min-width:unset;
+  }
+
+  .hero::before,
+  .hero::after{
+    font-size:130px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <div class="label">Официальный онлайн покер-рум</div>
+
+  <h1>
+    Закрытая платформа для <span>ценителей покера</span>
+  </h1>
+
+  <p class="subtitle">
+    Премиальная атмосфера, честная игра и международное комьюнити для игроков,
+    которые выбирают стратегию, интеллект и высокий уровень соперников.
+  </p>
+
+  <div class="meta">
+    <span>Texas Hold’em</span>
+    <span>Omaha</span>
+    <span>Онлайн турниры</span>
+    <span>Приватный доступ</span>
+  </div>
+
+  <a id="telegramBtn"
+     class="btn"
+     href="https://t.me/+0md-YEgbdPkzOTEy"
+     target="_blank"
+     rel="noopener noreferrer">
+    Перейти в Telegram
+  </a>
+
+  <div class="trust">
+    Доступ по приглашению · Международное комьюнити · 18+
+  </div>
+
+</section>
+
+<script>
+document.getElementById("telegramBtn").addEventListener("click", function(){
+  fbq('track','Contact');
+});
+</script>
+
+</body>
+</html>
